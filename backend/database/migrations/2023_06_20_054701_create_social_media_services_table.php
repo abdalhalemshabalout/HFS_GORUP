@@ -15,6 +15,9 @@ class CreateSocialMediaServicesTable extends Migration
     {
         Schema::create('social_media_services', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
+            $table->string('title');
+            $table->text('message');
             $table->timestamps();
         });
     }

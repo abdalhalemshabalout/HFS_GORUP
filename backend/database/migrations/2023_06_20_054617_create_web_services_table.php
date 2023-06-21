@@ -15,6 +15,9 @@ class CreateWebServicesTable extends Migration
     {
         Schema::create('web_services', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
+            $table->string('title');
+            $table->text('message');
             $table->timestamps();
         });
     }

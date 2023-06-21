@@ -15,6 +15,9 @@ class CreateSoftwareServicesTable extends Migration
     {
         Schema::create('software_services', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
+            $table->string('title');
+            $table->text('message');
             $table->timestamps();
         });
     }

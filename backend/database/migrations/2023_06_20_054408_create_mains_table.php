@@ -15,6 +15,9 @@ class CreateMainsTable extends Migration
     {
         Schema::create('mains', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('user_id');
+            $table->string('image');
+            $table->text('message');
             $table->timestamps();
         });
     }

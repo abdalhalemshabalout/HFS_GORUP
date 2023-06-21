@@ -15,6 +15,16 @@ class CreateAdminsTable extends Migration
     {
         Schema::create('admins', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('role_id')->default(1)
+                    ->constrained('roles')
+                    ->onUpdate('cascade')
+                    ->onDelete('cascade');
+            $table->string('name');
+            $table->string('surname');
+            $table->string('phone_number')->unique();
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->boolean('is_active')->default(0);
             $table->timestamps();
         });
     }

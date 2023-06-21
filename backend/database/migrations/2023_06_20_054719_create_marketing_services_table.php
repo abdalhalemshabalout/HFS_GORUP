@@ -15,6 +15,9 @@ class CreateMarketingServicesTable extends Migration
     {
         Schema::create('marketing_services', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
+            $table->string('title');
+            $table->text('message');
             $table->timestamps();
         });
     }
